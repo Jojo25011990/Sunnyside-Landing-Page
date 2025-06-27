@@ -1,0 +1,382 @@
+@import "tailwindcss";
+
+/* Global Settings */
+body {
+	font-family: "Barlow", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	font-family: "Fraunces", sans-serif;
+}
+
+h1 span {
+	display: inline-block;
+}
+
+section {
+	display: flex;
+	width: 100%;
+}
+
+@theme {
+	--container-mobile-navigation: 688px;
+}
+/* End of Global Settings */
+
+/* Desktop Width */
+.w-desktop-1440px {
+	width: 100%;
+	max-width: 1440px;
+
+	box-shadow: 0 0 2px rgba(0, 0, 0, 0.35);
+}
+/* End of Desktop Width */
+
+/* Container */
+
+.container-1360px {
+	width: 100%;
+	max-width: 1360px;
+}
+
+.container-1110px {
+	width: 100%;
+	max-width: 1110px;
+}
+/* End of Container */
+
+/* Header */
+header {
+	background-image: url("../public/images/desktop/image-header.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	height: 800px;
+}
+
+@media (max-width: 800px) {
+	header {
+		background-image: url("../public/images/mobile/image-header.jpg");
+	}
+}
+
+.mobile-navigation-triangle {
+	width: 40px;
+	height: 40px;
+	clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+}
+
+.nav-button {
+	font-size: 15px;
+	letter-spacing: 1px;
+}
+
+.nav-button:hover,
+.nav-button:active {
+	color: #fafafa;
+	background-color: rgba(255, 255, 255, 0.25);
+}
+
+.bounce-header-arrow {
+	position: relative;
+	animation: bounce-arrow 1.2s infinite;
+}
+
+@keyframes bounce-arrow {
+	0%,
+	100% {
+		transform: translateY(-10%);
+		animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+	}
+
+	50% {
+		transform: translateY(20%);
+		animation-timing-function: cubic-bezier(0.8, 0, 2, 1);
+	}
+}
+
+/* End of Header */
+
+/* Main */
+/* Section Content */
+.section-content {
+	width: 100%;
+	max-width: 445px;
+}
+
+.content-bg-img {
+	min-height: 100%;
+	height: 600px;
+
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+/* End of Section Content */
+
+/* Section Content anchor, pseudo element, hover & active states */
+.section-content a {
+	position: relative;
+	z-index: 10;
+
+	font-family: "Fraunces", sans-serif;
+	font-weight: 900;
+	font-size: 15px;
+	line-height: 165%;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+.section-content a.yellow-border::before {
+	content: "";
+
+	position: absolute;
+	bottom: 2px;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: -1;
+
+	width: 110%;
+	height: 8px;
+
+	background-color: #fad400;
+
+	border-radius: 999rem;
+
+	opacity: 0.4;
+
+	transition: opacity 0.3s;
+}
+
+.section-content a.yellow-border:hover::before,
+.section-content a.yellow-border:active::before {
+	opacity: 1;
+}
+
+.section-content a.red-border::before {
+	content: "";
+
+	position: absolute;
+	bottom: 2px;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: -1;
+
+	width: 110%;
+	height: 8px;
+
+	background-color: #fe7766;
+
+	border-radius: 999rem;
+
+	opacity: 0.4;
+
+	transition: opacity 0.3s;
+}
+
+.section-content a.red-border:hover::before,
+.section-content a.red-border:active::before {
+	opacity: 1;
+}
+/* End of Section Content anchor, pseudo element, hover & active states */
+
+/* Section Content Graphic Design & Photography */
+.content-graph-photo {
+	width: 100%;
+	max-width: 339px;
+
+	text-align: center;
+}
+
+.content-graph-photo > div h3 {
+	color: #24554a;
+}
+
+.content-graph-photo > div p {
+	color: #3e7467;
+}
+
+.content-graph-photo h3 {
+	font-size: 28px;
+	font-weight: 900;
+	line-height: 125%;
+	letter-spacing: 0;
+
+	color: #052c3b;
+
+	margin-bottom: 32px;
+}
+
+.content-graph-photo p {
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 170%;
+	letter-spacing: 0;
+
+	color: #19536c;
+}
+/* End of Section Content Graphic Design & Photography */
+
+/* Section Testimonials */
+.testimonial-card {
+	text-align: center;
+}
+
+.testimonial-card img {
+	display: inline-block;
+	width: 72px;
+	height: 72px;
+	border-radius: 50%;
+}
+
+.testimonial-card p {
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 165%;
+
+	color: #5b636d;
+}
+
+.testimonial-card h4 {
+	font-weight: 900;
+	font-size: 18px;
+	line-height: 125%;
+
+	color: #24303e;
+}
+
+.testimonial-card small {
+	font-weight: 600;
+	font-size: 14px;
+	letter-spacing: -0.1px;
+
+	color: #a7aaad;
+}
+
+/* End of Section Testimonials */
+/* End of Main */
+
+/* Footer */
+footer {
+	background-color: #90d4c6;
+	color: #24554a;
+}
+
+footer div nav:first-child ul li:last-child {
+	display: none;
+}
+footer a:hover,
+footer a:active {
+	color: #fff;
+}
+/* End of Footer */
+
+/* Media Query */
+@media (max-width: 1070px) {
+	section {
+		flex-direction: column;
+	}
+
+	section:nth-child(2) {
+		flex-direction: column-reverse;
+	}
+
+	section div {
+		width: 100%;
+	}
+
+	section:last-child {
+		flex-direction: row;
+	}
+
+	.testimonial-card-media-1070px {
+		flex-wrap: wrap;
+		gap: 60px;
+		padding-inline: 50px;
+	}
+
+	.testimonial-card-media-1070px p {
+		margin-bottom: 30px;
+	}
+}
+
+@media (max-width: 1000px) {
+	.section-gallery-wrapper-media-1000px {
+		@apply flex-wrap;
+	}
+
+	.section-gallery-media-1000px {
+		@apply w-1/2;
+	}
+}
+
+@media (max-width: 800px) {
+	.toggle-nav-buttons {
+		display: block;
+	}
+
+	.navigation-media-800px {
+		display: none;
+	}
+
+	footer .navigation-media-800px {
+		display: flex;
+	}
+
+	header h1 {
+		text-align: center;
+		font-size: 45px;
+	}
+
+	.mobile-navigation {
+		@apply w-full text-neutral-500 bg-white flex-col justify-center py-10 z-40;
+	}
+
+	.mobile-navigation-btn {
+		@apply bg-amber-400;
+	}
+
+	.mobile-navigation-btn:hover,
+	.mobile-navigation-btn:active {
+		@apply text-amber-400 bg-neutral-950;
+	}
+}
+
+@media (max-width: 600px) {
+	.section-content-media-600px {
+		padding-inline: 40px;
+	}
+}
+
+@media (max-width: 500px) {
+	.testimonial-card-media-1070px {
+		flex-wrap: wrap;
+		gap: 60px;
+		padding-inline: 0;
+	}
+
+	.testimonial-card-media-1070px div > div {
+		margin-bottom: 20px;
+	}
+}
+
+@media (max-width: 400px) {
+	header,
+	.sectionContentImg-media-400px {
+		padding-inline: 20px;
+	}
+
+	footer .navigation-media-800px {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	footer > div {
+		gap: 40px;
+	}
+}
+/* End of Media Query */
