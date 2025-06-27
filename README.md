@@ -20,10 +20,6 @@ This is a solution to the [Sunnyside agency landing page challenge on Frontend M
 
 ![](./Sunnyside%20landing%20page%20frontend%20mentor%20challenge.png)
 
--   Tablet
-
--   Mobile
-
 ### Links
 
 -   Solution URL: [Github](https://github.com/Jojo25011990/Sunnyside-Landing-Page)
